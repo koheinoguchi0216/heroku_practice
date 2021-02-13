@@ -7,12 +7,13 @@ app.config['DEBUG'] = True
 
 @app.route("/")
 def hello():
-    filenames = ['image_1.jpg','image_2.jpg','image_3.jpg','image_4.jpg','image_5.jpg']
+    filenames = [['image_1.jpg','ロールパンナ'],['image_2.jpg','アンパンマン'],['image_3.jpg','ばいきんまん'],['image_4.jpg','ダダンダン'],['image_5.jpg','カレーパンマン']]
     app.logger.debug(filenames)
     random.shuffle(filenames)
     app.logger.debug(filenames)
-    filename = filenames[0]
-    return render_template("index.html", title='aaa', file=filename)
+    filename = filenames[0][0]
+    character_name = filenames[0][1]
+    return render_template("index.html", title=character_name, file=filename)
 
 
 if __name__ == "__main__":
