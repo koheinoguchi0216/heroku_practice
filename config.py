@@ -16,5 +16,21 @@ class DevelopmentConfig:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
 
-
 Config = DevelopmentConfig
+
+
+#DB接続用のインスタンスを作成
+ENGINE = create_engine(
+    Config,
+    convert_unicode=True,
+    echo=True  #SQLをログに吐き出すフラグ
+)
+
+#上記のインスタンスを使って、MySQLとのセッションを張ります
+session = scoped_session(
+    sessionmaker(
+        autoflush = False,
+        autocommit = False,
+        bind = ENGINE,
+    )
+)
