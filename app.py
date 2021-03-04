@@ -1,8 +1,12 @@
 from flask import Flask, render_template
 import random
+from database import init_db
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
+app.config.from_object('config.Config')
+
+init_db(app)
 
 
 @app.route("/")
