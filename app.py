@@ -13,8 +13,8 @@ init_db(app)
 @app.route("/")
 def hello():
     filenames = [['image_1.jpg','ロールパンナ'],['image_2.jpg','アンパンマン'],['image_3.jpg','ばいきんまん'],['image_4.jpg','ダダンダン'],['image_5.jpg','カレーパンマン']]
-    names = session.query(Character).all()
-    app.logger.debug(names)
+    # names = session.query(Character).all()
+    # app.logger.debug(names)
     app.logger.debug(filenames)
     random.shuffle(filenames)
     app.logger.debug(filenames)

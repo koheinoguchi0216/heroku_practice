@@ -1,7 +1,6 @@
 from datetime import datetime
 from database import db
 
-
 class Character(db.Model):
 
     __tablename__ = 'characters'
