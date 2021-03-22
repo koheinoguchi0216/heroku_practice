@@ -1,22 +1,22 @@
 from flask import Flask, render_template
 import random
-from database import init_db
+from database import db
+from models import Character
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config.from_object('config.Config')
 
-init_db(app)
+db.init_app(app)
 
 
 @app.route("/")
 def hello():
-    filenames = [['image_1.jpg','ロールパンナ'],['image_2.jpg','アンパンマン'],['image_3.jpg','ばいきんまん'],['image_4.jpg','ダダンダン'],['image_5.jpg','カレーパンマン']]
-    app.logger.debug(filenames)
-    random.shuffle(filenames)
-    app.logger.debug(filenames)
-    filename = filenames[0][0]
-    character_name = filenames[0][1]
+    names = db.session.query(Character.name, Character.image_path).all()
+    random.shuffle(names)
+    filename = names[0][1]
+    character_name = names[0][0]
+
     return render_template("index.html", title=character_name, file=filename)
 
 
