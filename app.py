@@ -2,13 +2,14 @@ from flask import Flask, render_template
 import random
 from database import db
 from models import Character
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config.from_object('config.Config')
 
 db.init_app(app)
-
+Migrate(app, db)
 
 @app.route("/")
 def hello():
