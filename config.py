@@ -1,14 +1,17 @@
 """FlaskのConfigを提供する"""
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Flask
 DEBUG = False
 
 # local_config.pyファイルを読み込み
-try:
-    from .local_config import *
-except ImportError:
-    pass
+#try:
+#    from .local_config import *
+#except ImportError:
+#    pass
 
 
 
@@ -16,8 +19,6 @@ except ImportError:
 class DevelopmentConfig:
 
     if not DEBUG:
-        # SECRET_KEY設定
-        SECRET_KEY = os.environ['SECRET_KEY']
 
         # Flask
         DEBUG = True
