@@ -20,6 +20,5 @@ def hello():
 
     return render_template("index.html", title=character_name, file=filename)
 
-
 if __name__ == "__main__":
     app.run()
