@@ -1,21 +1,22 @@
 """FlaskのConfigを提供する"""
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
+# Flask
+DEBUG = True
 
 class DevelopmentConfig:
 
-    # Flask
-    DEBUG = True
-
     # SQLAlchemy
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{password}@{host}/{db_name}?charset=utf8'.format(**{
-        'user': os.getenv('DB_USER', 'rikizou'),           # localの情報に合わせて変更すること
-        'password': os.getenv('DB_PASSWORD', '{Rikizou105d}'),       # localの情報に合わせて変更すること
-        'host': os.getenv('DB_HOST', 'localhost'),      # localの情報に合わせて変更すること
-        'db_name': os.getenv('DB_DATABASE', 'mydb'),    # localの情報に合わせて変更すること
+        'user': os.getenv('DB_USER', os.environ['DB_USERNAME']),
+        'password': os.getenv('DB_PASSWORD', os.environ['DB_PASSWORD']),
+        'host': os.getenv('DB_HOST', os.environ['DB_HOSTNAME']),
+        'db_name': os.getenv('DB_DATABASE', os.environ['DB_NAME']),
     })
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
-
 
 Config = DevelopmentConfig
