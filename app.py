@@ -11,6 +11,9 @@ app.config.from_object('config.Config')
 db.init_app(app)
 Migrate(app, db)
 
+app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:////Users/nogu65/Desktop/flask_heroku/app.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 @app.route("/")
 def hello():
     names = db.session.query(Character.name, Character.image_path).all()
