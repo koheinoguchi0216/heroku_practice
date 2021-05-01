@@ -1,0 +1,2 @@
+[scripts]
+flake8 = "flake8 ."
