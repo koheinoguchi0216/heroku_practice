@@ -12,11 +12,13 @@ db.init_app(app)
 Migrate(app, db)
 
 @app.route("/")
+
 def top():
     return render_template('home.html')
 
 
 @app.route("/images")
+
 def hello():
     names = db.session.query(Character.name, Character.image_path).all()
     random.shuffle(names)
