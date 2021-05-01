@@ -1,0 +1,2 @@
+[scripts]
+isort = "isort . --atomic"
