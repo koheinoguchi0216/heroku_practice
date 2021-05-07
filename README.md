@@ -3,20 +3,22 @@
 #### ローカルの内容を最新にするgitコマンド
 ```git pull origin main```
 
-#### ブランチを作成するgitコマンド
-```git checkout -b "ブランチ名"```
+#### gitコマンド
+```git checkout -b "ブランチ名"``` （ブランチを作る）
 
-#### PRをあげるgitコマンド
-```git status```
+```git status``` （現在の状態を表示）
 
-```git add .``` （ファイルを追加した場合）
+```git add .``` （ステージングエリアにあげる）
 
-```git commit -am "コメント"```
+```git commit -am "コメント"``` （コミットする）
 
-```git push origin "作成したブランチ名"```
+```git push origin "作成したブランチ名"``` （PRを作成する）
 
 #### herokuにpushするgitコマンド
-```git push origin main```
+```git push heroku main```
+
+#### blackでpythonコードを自動でフォーマットする
+```pipenv run black```
 
 #### 新たにツールをインストールしたらPipfile.lockを更新する
 ```pipenv install requests --pre```
