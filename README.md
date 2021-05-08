@@ -20,5 +20,8 @@
 #### blackでpythonコードを自動でフォーマットする
 ```pipenv run black```
 
+#### flake8でpythonコードのチェック
+```pipenv run flake8```
+
 #### 新たにツールをインストールしたらPipfile.lockを更新する
 ```pipenv install requests --pre```
