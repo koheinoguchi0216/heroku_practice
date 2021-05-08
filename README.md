@@ -23,5 +23,8 @@
 #### flake8でpythonコードのチェック
 ```pipenv run flake8```
 
+#### isortでパッケージの順番を並び替える
+```pipenv run isort```
+
 #### 新たにツールをインストールしたらPipfile.lockを更新する
 ```pipenv install requests --pre```
