@@ -1,8 +1,10 @@
-from flask import Flask, render_template
 import random
+
+from flask import Flask, render_template
+from flask_migrate import Migrate
+
 from database import db
 from models import Character
-from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config["DEBUG"] = True

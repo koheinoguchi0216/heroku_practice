@@ -1,13 +1,12 @@
 """empty message
 
 Revision ID: 4a916e00517f
-Revises: 
+Revises:
 Create Date: 2021-04-19 21:29:53.547408
 
 """
-from alembic import op
 import sqlalchemy as sa
-
+from alembic import op
 
 # revision identifiers, used by Alembic.
 revision = "4a916e00517f"

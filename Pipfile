@@ -33,3 +33,4 @@ allow_prereleases = true
 [scripts]
 black = "black ."
 flake8 = "flake8 ."
+isort = "isort . --atomic"
