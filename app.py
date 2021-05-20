@@ -16,8 +16,8 @@ Migrate(app, db)
 
 @app.route("/")
 def top():
-    return render_template("home.html")
-
+    filename = ['anpanman-logo.jpeg','anpanman.jpg']
+    return render_template("home.html", file=filename)
 
 @app.route("/images")
 def hello():

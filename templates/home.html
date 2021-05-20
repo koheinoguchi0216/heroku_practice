@@ -7,19 +7,19 @@
     <header>
       <div class="header-main">
         <div class="header-left">
-          <img class="logo" src="../img/anpanman_log.jpeg" alt="アンパンマンのロゴ画像">
+          <img src="{{url_for('static', filename=file[0])}}" width="200px" height="165px">
         </div>
       </div>
     </header>
     <main>
       <div class="main-contents">
         <h1>アンパンマン大図鑑</h1>
-        <img class="main-image" src="../img/anpanman.jpeg" alt="アンパンマンの画像">
+        <img src="{{url_for('static', filename=file[1])}}" width="300px" height="340px">
         <a href="{{url_for('hello')}}"><h2>なかまをさがしにいく</h2></a>
       </div>
     </main>
     <footer>
-      
+
     </footer>
   </body>
 </html>
