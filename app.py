@@ -33,7 +33,7 @@ def hello():
 
 @app.route("/anpanman")
 def anpanman():
-    # sakki no method!!
+
     API_KEY = "AIzaSyBRgWX8460TpSK0OszHvVLtmM34S2fDRwo"
     CUSTOM_SEARCH_ENGINE = "b382b10e1bccd60e1"
 
