@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 from database import db
 from google_api import getImageUrl
 from models import Character
+import pyaudio
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
