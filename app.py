@@ -41,7 +41,7 @@ def anpanman():
     search_word = "あんぱんまん"
 
     img_list = getImageUrl(API_KEY, CUSTOM_SEARCH_ENGINE, search_word, page_limit)
-    image_path = img_list[0]
+    image_path = img_list[1]
 
     return render_template("anpanman.html", file=image_path)
 
