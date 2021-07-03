@@ -1,6 +1,6 @@
 import random
 
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect
 from flask_migrate import Migrate
 
 from database import db
@@ -47,6 +47,11 @@ def anpanman():
     image_path = img_list[1]
 
     return render_template("anpanman.html", file=image_path)
+
+@app.route("/voice")
+def mik():
+
+    return render_template("voice.html")
 
 
 if __name__ == "__main__":
