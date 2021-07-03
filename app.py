@@ -1,6 +1,6 @@
 import random
 
-from flask import Flask, render_template,redirect
+from flask import Flask, render_template
 from flask_migrate import Migrate
 
 from database import db
