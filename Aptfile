@@ -1,4 +1,2 @@
-# Test comment
-s3cmd
-wget
-portaudio19-dev python-all-dev
+portaudio19-dev
+python-all-dev
