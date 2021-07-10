@@ -25,6 +25,7 @@ black = "*"
 flake8 = "*"
 isort = "*"
 mypy = "*"
+pyaudio = "==0.2.11"
 
 [requires]
 python_version = "3.6"
