@@ -48,10 +48,10 @@ def hello():
 #
 #     return render_template("anpanman.html", file=image_path)
 
-app.route("/anpanman")
+@app.route("/anpanman")
 def anpanman():
 
-    return render_template("home.html")
+    return render_template("anpanman.html")
 
 @app.route("/voice")
 def mik():
