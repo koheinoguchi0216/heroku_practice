@@ -35,7 +35,7 @@ def hello():
 @app.route("/anpanman")
 def anpanman():
 
-    speech_text = speech()
+    # speech_text = speech()
 
     API_KEY = "AIzaSyBRgWX8460TpSK0OszHvVLtmM34S2fDRwo"
     CUSTOM_SEARCH_ENGINE = "b382b10e1bccd60e1"
