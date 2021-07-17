@@ -1,7 +1,5 @@
 import speech_recognition as sr
-
 # 音声入力
-
 
 def speech():
     while True:
