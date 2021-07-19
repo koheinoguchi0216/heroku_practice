@@ -20,6 +20,7 @@ requests = "*"
 google_api_python_client = "==2.7.0"
 SpeechRecognition = "==3.8.1"
 pyaudio = "*"
+wave = "*"
 
 [dev-packages]
 black = "*"
