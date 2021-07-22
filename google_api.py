@@ -39,3 +39,13 @@ def getImageUrl(api_key, cse_key, search_word, page_limit):
                 img_list.append(response[one_res]["items"][i]["link"])
 
     return img_list
+
+if __name__ == "__main__":
+    # -------------- Parameter and Path Settings -------------- #
+    API_KEY = "AIzaSyBRgWX8460TpSK0OszHvVLtmM34S2fDRwo"
+    CUSTOM_SEARCH_ENGINE = "b382b10e1bccd60e1"
+
+    page_limit = 1
+    search_word = "あんぱんまん"
+
+    img_list = getImageUrl(API_KEY, CUSTOM_SEARCH_ENGINE, search_word, page_limit)
