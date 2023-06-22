@@ -12,7 +12,7 @@
 
 ```git commit -am "コメント"``` （コミットする）
 
-```git push origin "作成したブランチ名"``` （PRを作成する）
+```git push origin "作成したブランチ名"``` （PRを作成）
 
 #### herokuにpushするgitコマンド
 ```git push heroku main```
